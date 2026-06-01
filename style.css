@@ -1,0 +1,164 @@
+html {
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='500'%3E%3C!-- grid --%3E%3Cg stroke='rgba(30,144,255,0.07)' stroke-width='1' fill='none'%3E%3Cline x1='0' y1='60' x2='800' y2='60'/%3E%3Cline x1='0' y1='140' x2='800' y2='140'/%3E%3Cline x1='0' y1='220' x2='800' y2='220'/%3E%3Cline x1='0' y1='300' x2='800' y2='300'/%3E%3Cline x1='0' y1='380' x2='800' y2='380'/%3E%3Cline x1='0' y1='460' x2='800' y2='460'/%3E%3Cline x1='80' y1='0' x2='80' y2='500'/%3E%3Cline x1='200' y1='0' x2='200' y2='500'/%3E%3Cline x1='320' y1='0' x2='320' y2='500'/%3E%3Cline x1='440' y1='0' x2='440' y2='500'/%3E%3Cline x1='560' y1='0' x2='560' y2='500'/%3E%3Cline x1='680' y1='0' x2='680' y2='500'/%3E%3C/g%3E%3C!-- hexagons --%3E%3Cg fill='rgba(46,204,113,0.05)' stroke='rgba(46,204,113,0.08)' stroke-width='1'%3E%3Cpolygon points='700,120 720,108 740,120 740,144 720,156 700,144'/%3E%3Cpolygon points='740,120 760,108 780,120 780,144 760,156 740,144'/%3E%3Cpolygon points='720,156 740,144 760,156 760,180 740,192 720,180'/%3E%3Cpolygon points='20,200 40,188 60,200 60,224 40,236 20,224'/%3E%3Cpolygon points='60,200 80,188 100,200 100,224 80,236 60,224'/%3E%3C/g%3E%3C!-- lightning --%3E%3Cg fill='rgba(30,144,255,0.06)' stroke='rgba(30,144,255,0.09)' stroke-width='1'%3E%3Cpolygon points='740,30 728,55 738,55 726,80 750,48 739,48'/%3E%3Cpolygon points='60,280 48,305 58,305 46,330 70,298 59,298'/%3E%3Cpolygon points='610,350 598,375 608,375 596,400 620,368 609,368'/%3E%3C/g%3E%3C!-- orbs --%3E%3Cellipse cx='100' cy='80' rx='180' ry='160' fill='rgba(30,144,255,0.06)'/%3E%3Cellipse cx='700' cy='420' rx='200' ry='160' fill='rgba(46,204,113,0.05)'/%3E%3C/svg%3E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.navbar {
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
+}
+
+.middle-nav {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 90px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px -4px rgb(0, 0, 0);
+  height: 3.5rem;
+  width: 75%;
+  margin: auto;
+  backdrop-filter: blur(8px);
+  transition:
+    border-bottom 0.5s,
+    width 0.5s;
+  &:hover {
+    border-bottom: 1px solid rgba(30, 144, 255, 1);
+    width: 77%;
+  }
+}
+
+.navbar:has(.middle-nav:hover) .bt-home {
+  transition: margin-left 0.5s;
+  margin-left: 107rem;
+}
+
+.navbar:has(.middle-nav:hover) .logo-car {
+  transition: margin-left 0.5s;
+  margin-left: 9.1rem;
+}
+
+/* این دوتا یکین  */
+.bt-home {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  width: 3.7rem;
+  height: 3.7rem;
+  position: absolute;
+  margin-left: 106rem;
+  border-radius: 100%;
+  box-shadow: 0px 0px 15px -4px rgb(0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition:
+    scale 0.5s,
+    transform 0.3s,
+    margin-left 0.5s;
+  &:hover {
+    transform: translate(0px, -3px);
+    scale: 1.05;
+  }
+}
+
+.logo-car {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  width: 3.7rem;
+  height: 3.7rem;
+  position: absolute;
+  margin-left: 10.2rem;
+  border-radius: 100%;
+  box-shadow: 0px 0px 15px -4px rgb(0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition:
+    scale 0.5s,
+    transform 0.3s,
+    margin-left 0.5s;
+  &:hover {
+    transform: translate(0px, -3px);
+    scale: 1.05;
+  }
+}
+/* این بالایی */
+
+.light {
+  display: flex;
+  position: absolute;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: #1e90ff;
+  border-radius: 100%;
+  left: 1.15rem;
+  top: 1.5rem;
+  animation: blinkFront 1.2s ease-in-out infinite;
+}
+
+@keyframes blinkFront {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow:
+      0 0 5px 2px rgba(30, 144, 255, 0.7),
+      0 0 5px 2px rgba(30, 144, 255, 0.35);
+  }
+  50% {
+    opacity: 0.25;
+    box-shadow: none;
+  }
+}
+
+.light-right-loction {
+  margin-left: 0.93rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.nav-list li a {
+  font-family: "Lalezar", sans-serif;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 9px 20px;
+  text-decoration: none;
+  transition:
+    color 0.3s,
+    transform 0.7s,
+    scale 0.7s;
+  &:hover {
+    transform: rotate(2.5deg);
+    scale: 1.1;
+    color: #1e90ff;
+  }
+}

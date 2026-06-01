@@ -541,3 +541,76 @@ body::before {
     transform: scale(0.85) rotate(360deg);
   }
 }
+/*  */
+.logo-section {
+  transition: all 0.5s;
+  padding-top: 5rem;
+  height: 23rem;
+
+  & h2 {
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.logos {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+  display: flex;
+  margin: auto;
+  width: 100rem;
+  height: 12rem;
+  border-radius: 30px;
+  margin-top: 1rem;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.logo-company {
+  transition: all 0.5s;
+  border: 1px solid #ebf0f4;
+  border-radius: 20px;
+  /* margin: auto; */
+  background: linear-gradient(180deg, #fff 44.53%, #f5f9fb);
+  height: 9rem;
+  width: 9.25rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+#tesla img {
+  margin-top: 1rem;
+}
+
+#porsche img {
+  margin-top: 0.7rem;
+}
+
+#hyundai img {
+  margin-top: 0.7rem;
+}
+
+#byd img {
+  margin-top: 0.2rem;
+}
+
+#bmw img {
+  margin-top: 0.7rem;
+}
+
+#volkswagen img {
+  margin-top: 0.7rem;
+}
+
+.text-logos {
+  display: flex;
+  position: absolute;
+  margin-top: 6.25rem;
+}

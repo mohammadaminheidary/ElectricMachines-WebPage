@@ -61,8 +61,8 @@ body::before {
   margin-left: 9.1rem;
 }
 
-/* این دوتا یکین  */
-.bt-home {
+
+.bt-home, .logo-car {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(12px);
   width: 3.7rem;
@@ -84,32 +84,14 @@ body::before {
     transform: translate(0px, -3px);
     scale: 1.05;
   }
-}
 
-.logo-car {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(12px);
-  width: 3.7rem;
-  height: 3.7rem;
-  position: absolute;
-  margin-left: 10.2rem;
-  border-radius: 100%;
-  box-shadow: 0px 0px 15px -4px rgb(0, 0, 0);
-  border: 1px solid rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  transition:
-    scale 0.5s,
-    transform 0.3s,
-    margin-left 0.5s;
-  &:hover {
-    transform: translate(0px, -3px);
-    scale: 1.05;
+  &.bt-home {
+    margin-left: 106rem;
+  }
+  &.logo-car {
+    margin-left: 10.2rem;
   }
 }
-/* این بالایی */
 
 .light {
   display: flex;
@@ -437,31 +419,11 @@ body::before {
   margin-top: 1rem;
 }
 
-.benefits-part:has(.cart-1:hover) .plus-1 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
-.benefits-part:has(.cart-2:hover) .plus-2 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
-.benefits-part:has(.cart-3:hover) .plus-3 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
-.benefits-part:has(.cart-4:hover) .plus-4 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
-.benefits-part:has(.cart-5:hover) .plus-5 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
+.benefits-part:has(.cart-1:hover) .plus-1,
+.benefits-part:has(.cart-2:hover) .plus-2,
+.benefits-part:has(.cart-3:hover) .plus-3,
+.benefits-part:has(.cart-4:hover) .plus-4,
+.benefits-part:has(.cart-5:hover) .plus-5,
 .benefits-part:has(.cart-6:hover) .plus-6 {
   transition: all 0.5s;
   animation: spin-and-pulse 10s ease-in-out infinite;
@@ -490,35 +452,16 @@ body::before {
   color: rgba(74, 222, 128, 0.4);
 }
 
-.benefits-part:has(.cart-1-minus:hover) .minus-1 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
-.benefits-part:has(.cart-2-minus:hover) .minus-2 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
-.benefits-part:has(.cart-3-minus:hover) .minus-3 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
-.benefits-part:has(.cart-4-minus:hover) .minus-4 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
-.benefits-part:has(.cart-5-minus:hover) .minus-5 {
-  transition: all 0.5s;
-  animation: spin-and-pulse 10s ease-in-out infinite;
-}
-
+.benefits-part:has(.cart-1-minus:hover) .minus-1,
+.benefits-part:has(.cart-2-minus:hover) .minus-2,
+.benefits-part:has(.cart-3-minus:hover) .minus-3,
+.benefits-part:has(.cart-4-minus:hover) .minus-4,
+.benefits-part:has(.cart-5-minus:hover) .minus-5,
 .benefits-part:has(.cart-6-minus:hover) .minus-6 {
   transition: all 0.5s;
   animation: spin-and-pulse 10s ease-in-out infinite;
 }
+
 
 .grid-particles-minus {
   position: absolute;
@@ -650,222 +593,137 @@ body::before {
 }
 
 /*==== tesla:hover ====*/
-#tesla:hover {
+.logo-company-all {
+  transition: all 0.5s;
+  scale: 0.95;
+
+  &:hover {
   transition: all 0.5s;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   scale: 1.1;
+  }
 }
 
 .logo-section:has(#tesla:hover) #porsche {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(30px);
 }
 
 .logo-section:has(#tesla:hover) #hyundai {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(40px);
 }
 
 .logo-section:has(#tesla:hover) #byd {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(50px);
 }
 
 .logo-section:has(#tesla:hover) #bmw {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(60px);
 }
 
 .logo-section:has(#tesla:hover) #volkswagen {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(70px);
 }
 
 /* porsche:hover  */
-#porsche:hover {
-  transition: all 0.5s;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  scale: 1.1;
-}
-
 .logo-section:has(#porsche:hover) #tesla {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-70px);
 }
 
 .logo-section:has(#porsche:hover) #hyundai {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(70px);
 }
 
 .logo-section:has(#porsche:hover) #byd {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(60px);
 }
 
 .logo-section:has(#porsche:hover) #bmw {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(50px);
 }
 
 .logo-section:has(#porsche:hover) #volkswagen {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(40px);
 }
 /* hyundai:hover  */
-#hyundai:hover {
-  transition: all 0.5s;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  scale: 1.1;
-}
-
 .logo-section:has(#hyundai:hover) #tesla {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-70px);
 }
 
 .logo-section:has(#hyundai:hover) #porsche {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-60px);
 }
 
 .logo-section:has(#hyundai:hover) #byd {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(60px);
 }
 
 .logo-section:has(#hyundai:hover) #bmw {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(50px);
 }
 
 .logo-section:has(#hyundai:hover) #volkswagen {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(40px);
 }
 
 /* byd:hover  */
-#byd:hover {
-  transition: all 0.5s;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  scale: 1.1;
-}
-
 .logo-section:has(#byd:hover) #tesla {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-70px);
 }
 
 .logo-section:has(#byd:hover) #porsche {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-60px);
 }
 
 .logo-section:has(#byd:hover) #hyundai {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-50px);
 }
 
 .logo-section:has(#byd:hover) #bmw {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(50px);
 }
 
 .logo-section:has(#byd:hover) #volkswagen {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(40px);
 }
 
 /* bmw:hover */
-#bmw:hover {
-  transition: all 0.5s;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  scale: 1.1;
-}
-
 .logo-section:has(#bmw:hover) #tesla {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-70px);
 }
 
 .logo-section:has(#bmw:hover) #porsche {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-60px);
 }
 
 .logo-section:has(#bmw:hover) #hyundai {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-50px);
 }
 
 .logo-section:has(#bmw:hover) #byd {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-40px);
 }
 
 .logo-section:has(#bmw:hover) #volkswagen {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(40px);
 }
 /* volkswagen:hover */
-#volkswagen:hover {
-  transition: all 0.5s;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-  scale: 1.1;
-}
-
 .logo-section:has(#volkswagen:hover) #tesla {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-70px);
 }
 
 .logo-section:has(#volkswagen:hover) #porsche {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-60px);
 }
 
 .logo-section:has(#volkswagen:hover) #hyundai {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-50px);
 }
 
 .logo-section:has(#volkswagen:hover) #byd {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-40px);
 }
 
 .logo-section:has(#volkswagen:hover) #bmw {
-  transition: all 0.5s;
-  scale: 0.95;
   transform: translateX(-30px);
 }
 /*  */

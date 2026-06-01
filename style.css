@@ -368,7 +368,27 @@ body::before {
     width: 16%;
     height: 15rem;
     border-radius: 30px;
+
+    transition:
+      scale 0.25s,
+      box-shadow 0.5s;
+    &:hover {
+      box-shadow: 0 0 30px rgba(74, 222, 128, 0.4);
+      scale: 1.02;
+    }
   }
+
+  & .disadvantages {
+    background: rgba(254, 242, 242, 0.45);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(248, 113, 113, 0.4);
+    box-shadow: 0 4px 20px 0 rgba(220, 38, 38, 0.03);
+    border-radius: 30px;
+
+    &:hover {
+      box-shadow: 0 0 30px rgba(248, 113, 113, 0.4);
+        }
+    }
 
   & p {
     font-family: "Vazirmatn", sans-serif;
@@ -383,5 +403,141 @@ body::before {
     height: 3rem;
     display: flex;
     margin: auto;
+  }
+}
+
+.glass-logo {
+  background-color: transparent;
+  backdrop-filter: blur(90px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 1rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.benefits-part:has(.cart-1:hover) .plus-1 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-2:hover) .plus-2 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-3:hover) .plus-3 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-4:hover) .plus-4 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-5:hover) .plus-5 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-6:hover) .plus-6 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.grid-particles-plus {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 15px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.grid-particles-plus span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  opacity: 0.3;
+  transition: all 0.5s;
+  color: rgba(74, 222, 128, 0.4);
+}
+
+.benefits-part:has(.cart-1-minus:hover) .minus-1 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-2-minus:hover) .minus-2 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-3-minus:hover) .minus-3 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-4-minus:hover) .minus-4 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-5-minus:hover) .minus-5 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.benefits-part:has(.cart-6-minus:hover) .minus-6 {
+  transition: all 0.5s;
+  animation: spin-and-pulse 10s ease-in-out infinite;
+}
+
+.grid-particles-minus {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  padding: 15px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.grid-particles-minus span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  opacity: 0.3;
+  transition: all 0.5s;
+  color: rgba(248, 113, 113, 0.4);
+}
+
+@keyframes spin-and-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(0.85) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.85) rotate(360deg);
   }
 }

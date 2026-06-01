@@ -329,3 +329,59 @@ body::before {
 .glass-charging {
   height: 14rem;
 }
+/*  */
+.benefits-part-all {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+  border-radius: 30px;
+  height: 37rem;
+  width: 100rem;
+  margin: auto;
+  position: relative;
+}
+
+.introduction-pros-cons {
+  width: 100%;
+  height: 85rem;
+  margin: auto;
+  & h2 {
+    font-family: "Lalezar", sans-serif;
+    font-size: 2.1rem;
+    text-align: center;
+    padding-top: 5rem;
+  }
+
+  & .benefits-part {
+    display: flex;
+    margin-top: 2rem;
+    gap: 9rem;
+    justify-content: center;
+  }
+  & .benefits-cart {
+    color: #0a192f;
+    background: rgba(240, 253, 244, 0.45);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(74, 222, 128, 0.4);
+    box-shadow: 0 4px 20px 0 rgba(22, 163, 74, 0.03);
+    width: 16%;
+    height: 15rem;
+    border-radius: 30px;
+  }
+
+  & p {
+    font-family: "Vazirmatn", sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  & img {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    margin: auto;
+  }
+}

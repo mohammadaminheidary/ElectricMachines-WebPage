@@ -277,3 +277,47 @@ body::before {
   position: absolute;
   margin-top: -6.5rem;
 }
+
+.introduction {
+  width: 100%;
+  height: 17rem;
+  text-align: end;
+  padding-top: 6rem;
+  line-height: 2.5rem;
+
+  & h2 {
+    padding-right: 0.4rem;
+    font-family: "Lalezar", sans-serif;
+  }
+
+  & p {
+    font-family: "Vazirmatn", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    font-style: normal;
+    border-right: 2px solid #0a192f;
+    letter-spacing: 1px;
+    line-height: 2;
+    text-align: justify;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    color: #0a192f;
+  }
+}
+
+.glass-cart {
+  margin: auto;
+  border-radius: 30px;
+  height: 12rem;
+  width: 100rem;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+  padding-top: 0.5rem;
+  padding-right: 0.4rem;
+}
+
+.glass-charging {
+  height: 14rem;
+}

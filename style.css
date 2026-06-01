@@ -278,6 +278,12 @@ body::before {
   margin-top: -6.5rem;
 }
 
+#pros-cons {
+  display: inline-block;
+  position: absolute;
+  margin-top: 0.5rem;
+}
+
 .introduction {
   width: 100%;
   height: 17rem;
@@ -613,4 +619,224 @@ body::before {
   display: flex;
   position: absolute;
   margin-top: 6.25rem;
+}
+
+/*==== tesla:hover ====*/
+#tesla:hover {
+  transition: all 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  scale: 1.1;
+}
+
+.logo-section:has(#tesla:hover) #porsche {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(30px);
+}
+
+.logo-section:has(#tesla:hover) #hyundai {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(40px);
+}
+
+.logo-section:has(#tesla:hover) #byd {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(50px);
+}
+
+.logo-section:has(#tesla:hover) #bmw {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(60px);
+}
+
+.logo-section:has(#tesla:hover) #volkswagen {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(70px);
+}
+
+/* porsche:hover  */
+#porsche:hover {
+  transition: all 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  scale: 1.1;
+}
+
+.logo-section:has(#porsche:hover) #tesla {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-70px);
+}
+
+.logo-section:has(#porsche:hover) #hyundai {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(70px);
+}
+
+.logo-section:has(#porsche:hover) #byd {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(60px);
+}
+
+.logo-section:has(#porsche:hover) #bmw {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(50px);
+}
+
+.logo-section:has(#porsche:hover) #volkswagen {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(40px);
+}
+/* hyundai:hover  */
+#hyundai:hover {
+  transition: all 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  scale: 1.1;
+}
+
+.logo-section:has(#hyundai:hover) #tesla {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-70px);
+}
+
+.logo-section:has(#hyundai:hover) #porsche {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-60px);
+}
+
+.logo-section:has(#hyundai:hover) #byd {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(60px);
+}
+
+.logo-section:has(#hyundai:hover) #bmw {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(50px);
+}
+
+.logo-section:has(#hyundai:hover) #volkswagen {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(40px);
+}
+
+/* byd:hover  */
+#byd:hover {
+  transition: all 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  scale: 1.1;
+}
+
+.logo-section:has(#byd:hover) #tesla {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-70px);
+}
+
+.logo-section:has(#byd:hover) #porsche {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-60px);
+}
+
+.logo-section:has(#byd:hover) #hyundai {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-50px);
+}
+
+.logo-section:has(#byd:hover) #bmw {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(50px);
+}
+
+.logo-section:has(#byd:hover) #volkswagen {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(40px);
+}
+
+/* bmw:hover */
+#bmw:hover {
+  transition: all 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  scale: 1.1;
+}
+
+.logo-section:has(#bmw:hover) #tesla {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-70px);
+}
+
+.logo-section:has(#bmw:hover) #porsche {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-60px);
+}
+
+.logo-section:has(#bmw:hover) #hyundai {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-50px);
+}
+
+.logo-section:has(#bmw:hover) #byd {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-40px);
+}
+
+.logo-section:has(#bmw:hover) #volkswagen {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(40px);
+}
+/* volkswagen:hover */
+#volkswagen:hover {
+  transition: all 0.5s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  scale: 1.1;
+}
+
+.logo-section:has(#volkswagen:hover) #tesla {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-70px);
+}
+
+.logo-section:has(#volkswagen:hover) #porsche {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-60px);
+}
+
+.logo-section:has(#volkswagen:hover) #hyundai {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-50px);
+}
+
+.logo-section:has(#volkswagen:hover) #byd {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-40px);
+}
+
+.logo-section:has(#volkswagen:hover) #bmw {
+  transition: all 0.5s;
+  scale: 0.95;
+  transform: translateX(-30px);
 }

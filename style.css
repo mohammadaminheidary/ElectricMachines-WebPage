@@ -40,6 +40,8 @@ body::before {
   width: 75%;
   margin: auto;
   backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
   transition:
     border-bottom 0.5s,
     width 0.5s;

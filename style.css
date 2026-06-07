@@ -231,10 +231,10 @@ body::before {
 }
 
 .down {
-  animation: moveUpDown 2s ease-in-out infinite;
+  animation: moveUpDownbt 2s ease-in-out infinite;
 }
 
-@keyframes moveUpDown {
+@keyframes moveUpDownbt {
   0%,
   100% {
     transform: translateY(0);
@@ -743,19 +743,20 @@ body::before {
 }
 /*  */
 .introducing-car {
+  transition: all 0.5s;
   display: flex;
-  width: 100%;
-  height: 37rem;
+  width: 100rem;
   margin: auto;
+  margin-bottom: 25rem;
 
   & .car-card {
+    transition: all 0.5s;
     position: relative;
     margin: auto;
     width: 23%;
-    height: 35rem;
-    background-color: #f5f7fa;
 
     & img {
+      transition: all 0.5s;
       object-fit: cover;
       width: 100%;
       height: 16rem;
@@ -763,30 +764,131 @@ body::before {
       top: 0;
       left: 0;
       z-index: 2;
+      border-radius: 30px;
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
     }
 
     & > div {
-      background-color: #fff;
+      transition: all 0.5s;
       width: 100%;
-      height: 21rem;
+      height: 16.5rem;
       position: absolute;
-      top: 0;
+      top: 1.5rem;
       left: 0;
       z-index: 1;
+      border-radius: 0px 0px 30px 30px;
+      animation: moveUpDown 2s ease-in-out infinite;
+
 
       & > span {
+        transition: all 0.5s;
         display: block;
-        width: 3rem;
-        border: 3px solid black;
-        border-radius: 1rem;
+        width: 3.5rem;
+        height: 0.3rem;
+        background-color: #111111;
+        border-radius: 30px;
         margin: auto;
-        margin-top: 8rem;
+        margin-top: 4.6rem;
       }
     }
   }
 }
 
+.introducing-car:has(.car-card-bmw:hover, .car-card-byd:hover, .car-card-benz:hover, .car-card-tesla:hover) div {
+  animation: none;
+}
+
+.introducing-car:has(.car-card-bmw:hover) .bmw-img{
+  transition: all 0.5s;
+  transform: translateY(-80px);
+}
+
+.introducing-car:has(.car-card-bmw:hover) .information-car-bmw {
+  transition: all 0.5s;
+  height: 22rem;
+}
+
+.introducing-car:has(.car-card-bmw:hover) .specs-bmw {
+  transition: all 0.5s;
+  margin-top: 11rem;
+}
+
+.introducing-car:has(.car-card-bmw:hover) #bmw-line {
+  transition: all 0.5s;
+  margin-top: 2rem;
+}
+
+.introducing-car:has(.car-card-byd:hover) .byd-img {
+  transition: all 0.5s;
+  transform: translateY(-80px);
+}
+
+.introducing-car:has(.car-card-byd:hover) .information-car-byd {
+  transition: all 0.5s;
+  height: 22rem;
+}
+
+.introducing-car:has(.car-card-byd:hover) .specs-byd {
+  transition: all 0.5s;
+  margin-top: 11rem;
+}
+
+.introducing-car:has(.car-card-byd:hover) #byd-line {
+  transition: all 0.5s;
+  margin-top: 2rem;
+}
+
+.introducing-car:has(.car-card-benz:hover) .benz-img {
+  transition: all 0.5s;
+  transform: translateY(-80px);
+}
+
+.introducing-car:has(.car-card-benz:hover) .information-car-benz {
+  transition: all 0.5s;
+  height: 22rem;
+}
+
+.introducing-car:has(.car-card-benz:hover) .specs-benz {
+  transition: all 0.5s;
+  margin-top: 11rem;
+}
+
+.introducing-car:has(.car-card-benz:hover) #benz-line {
+  transition: all 0.5s;
+  margin-top: 2rem;
+}
+
+.introducing-car:has(.car-card-tesla:hover) .tesla-img {
+  transition: all 0.5s;
+  transform: translateY(-80px);
+}
+
+.introducing-car:has(.car-card-tesla:hover) .information-car-tesla {
+  transition: all 0.5s;
+  height: 22rem;
+}
+
+.introducing-car:has(.car-card-tesla:hover) .specs-tesla {
+  transition: all 0.5s;
+  margin-top: 11rem;
+}
+
+.introducing-car:has(.car-card-tesla:hover) #tesla-line {
+  transition: all 0.5s;
+  margin-top: 2rem;
+}
+
+@keyframes moveUpDown {
+            0%, 100% {
+                transform: translateY(0); /* موقعیت اصلی */
+            }
+            50% {
+                transform: translateY(-8px); /* ۲۰ پیکسل به سمت بالا می‌رود */
+            }
+}
+
 .specs {
+  transition: all 0.5s;
   width: 100%;
   height: 8rem;
   display: grid;  
@@ -800,8 +902,12 @@ body::before {
 }
 
 .spec-box {
-  background-color: #f5f7fa;
-  border: 0.5px solid #e0e0e0;
+  /* background-color: #f5f7fa;
+  border: 0.5px solid #e0e0e0; */
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -812,15 +918,17 @@ body::before {
 }
 
 .spec-label {
+  font-family: "Vazirmatn", sans-serif;
   font-size: 11px;
-  color: #888888;
+  color: #000000bf;
   font-weight: 400;
 }
 
 .spec-value {
+  font-family: "Vazirmatn", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  color: #111111;
+  color: #000000;
 }
 
 @media (max-width: 900px) {

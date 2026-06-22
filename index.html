@@ -29,50 +29,38 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="#home" class="hover-text-nav">
-        <div class="bt-home glass-black">
+      <div class="middle-nav glass-black">
+        <div class="search glass-black">
+          <form action="">
+            <input type="search" placeholder="Search" class="search-input"/>
+          </form>
+        </div>
+        <div class="nav-list">
+          <a href="#engine" class="hover-text-nav">پیشرانه</a>
+          <a href="#battery" class="hover-text-nav">باتری</a>
+          <a href="#charging" class="hover-text-nav">شارژ و برد</a>
+          <a href="#pros">مزایا </a>
+          <a href="#cons">معایب</a>
+          <a href="#company">برترین شرکت ها</a>
+          <a href="#company">معرفی ماشین ها</a>
+        </div>
+      </div>
+      <div class="bt-home glass-black">
+        <a href="#home">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="#E7E7E7"
+            viewBox="0 0 24 24">
+            <path fill="#E7E7E7"
               d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1"
             />
           </svg>
-        </div>
-      </a>
-      <div class="logo-car glass-black">
-        <spna class="light light-right-loction"></spna>
-        <span class="light light-left-loction"></span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="#E7E7E7"
-            d="M18.92 2c-.2-.58-.76-1-1.42-1h-11c-.66 0-1.21.42-1.42 1L3 8v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1V8zM6.5 12c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9S8 9.67 8 10.5S7.33 12 6.5 12m11 0c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5M5 7l1.5-4.5h11L19 7zm2 13h4v-2l6 3h-4v2z"
-          />
-        </svg>
-      </div>
-      <div class="middle-nav glass-black">
-        <ul class="nav-list" dir="rtl">
-          <li><a href="#engine" class="hover-text-nav">پیشرانه</a></li>
-          <li><a href="#battery" class="hover-text-nav">باتری</a></li>
-          <li><a href="#charging" class="hover-text-nav">شارژ و برد</a></li>
-          <li><a href="#pros">مزایا </a></li>
-          <li><a href="#cons">معایب</a></li>
-          <li><a href="#company">برترین شرکت ها</a></li>
-          <li><a href="#company">معرفی ماشین ها</a></li>
-        </ul>
+        </a>
       </div>
     </div>
 
-    <div class="fade-bottom"></div>
+    <!-- <div class="fade-bottom"></div> -->
     <div class="down-bt">
       <a href="#engine">
         <span class="circle">
@@ -102,8 +90,11 @@
       <img class="car-img-intro" src="Model-3-Standard-Hero-Desktop-EMEA.jpg" />
     </div>
     <!--  -->
-    <h2 class="introduction-electric-car">چرا ماشین برقی؟</h2>
-    <div class="introduction" dir="rtl">
+    
+    <!-- new -->
+    <div class="intro-cards">
+      <h2 class="introduction-electric-car">چرا ماشین برقی؟</h2>
+       <div class="introduction" dir="rtl">
       <span class="loction-span" id="engine"> </span>
       <div class="glass-cart cursor-read glass-white">
         <h3 dir="ltr">پیشرانه 🚗</h3>
@@ -149,10 +140,12 @@
         </p>
       </div>
     </div>
+    </div>  
     <!--  -->
     <span id="pros" class="loction-span"></span>
     <div class="introduction-pros-cons">
-      <div class="glass-back-text-pros-cons loction-benefits">
+      <div class="benefits">
+        <div class="glass-back-text-pros-cons">
         <h2>مزایا</h2>
       </div>
       <div class="benefits-part">
@@ -266,6 +259,7 @@
             خودروهای برقی با محیط‌ زیست سازگار تر و کم‌ کربن‌ تر هستند.
           </p>
         </div>
+      </div>
       </div>
       <span id="cons" class="loction-span"></span>
       <div class="glass-back-text-pros-cons">

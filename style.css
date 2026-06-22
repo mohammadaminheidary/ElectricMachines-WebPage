@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
   user-select: none;
+
+  /* * {
+    border: 1px solid red;
+  } */
 }
 
 * {
@@ -46,6 +50,9 @@ body::before {
 }
 
 .navbar {
+  display: flex;
+  justify-content: center;
+  column-gap: 1rem;
   position: sticky;
   top: 1rem;
   z-index: 1000;
@@ -54,20 +61,20 @@ body::before {
 .middle-nav {
   border-radius: 90px;
   height: 3.5rem;
-  width: 75%;
-  margin: auto;
+  width: 100rem;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
   transition:
     border-bottom 0.5s,
     width 0.5s;
   &:hover {
     border-bottom: 1px solid rgba(30, 144, 255, 1);
-    width: 77%;
+    /* width: 102rem; */
   }
 }
 
-.navbar:has(.middle-nav:hover) .bt-home {
+/* .navbar:has(.middle-nav:hover) .bt-home {
   transition: margin-left 0.5s;
   margin-left: 107rem;
 }
@@ -75,14 +82,11 @@ body::before {
 .navbar:has(.middle-nav:hover) .logo-car {
   transition: margin-left 0.5s;
   margin-left: 9.1rem;
-}
+} */
 
-.bt-home,
-.logo-car {
+.bt-home {
   width: 3.7rem;
   height: 3.7rem;
-  position: absolute;
-  margin-left: 106rem;
   border-radius: 100%;
   display: flex;
   justify-content: center;
@@ -96,57 +100,47 @@ body::before {
     transform: translate(0px, -3px);
     scale: 1.05;
   }
-
-  &.bt-home {
-    margin-left: 106rem;
-  }
-  &.logo-car {
-    margin-left: 10.2rem;
-  }
 }
 
-.light {
+.search {
+  width: 15rem;
+  height: 2.5rem;
+  border-radius: 70px;
   display: flex;
-  position: absolute;
-  width: 0.4rem;
-  height: 0.4rem;
-  background-color: #1e90ff;
-  border-radius: 100%;
-  left: 1.15rem;
-  top: 1.5rem;
-  animation: blinkFront 1.2s ease-in-out infinite;
-}
-
-@keyframes blinkFront {
-  0%,
-  100% {
-    opacity: 1;
-    box-shadow:
-      0 0 5px 2px rgba(30, 144, 255, 0.7),
-      0 0 5px 2px rgba(30, 144, 255, 0.35);
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.176);
+  border-color: rgba(75, 75, 75, 0.313);
+  & input {
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 70px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
   }
-  50% {
-    opacity: 0.25;
-    box-shadow: none;
-  }
-}
 
-.light-right-loction {
-  margin-left: 0.93rem;
+  & input::placeholder {
+    color: white;
+  }
 }
 
 .nav-list {
-  list-style-type: none;
   display: flex;
-  font-size: 1.4rem;
+  flex-direction: row-reverse;
+  column-gap: 7rem;
+  margin-right: 2.5rem;
 }
 
-.nav-list li a {
+.nav-list a {
   font-family: "Lalezar", sans-serif;
-  display: block;
+  font-size: 1.4rem;
   color: #fff;
-  text-align: center;
-  padding: 9px 65px;
+  display: flex;
   text-decoration: none;
   transition:
     color 0.3s,
@@ -159,7 +153,7 @@ body::before {
   }
 }
 
-.fade-bottom {
+/* .fade-bottom {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -175,7 +169,7 @@ body::before {
   );
   pointer-events: none;
   z-index: 999;
-}
+} */
 
 .intro {
   position: relative;
@@ -268,12 +262,6 @@ body::before {
   border-radius: 0 0 35px 35px;
 }
 
-.loction-span {
-  display: inline-block;
-  position: absolute;
-  margin-top: -6.5rem;
-}
-
 #pros-cons {
   display: inline-block;
   position: absolute;
@@ -281,11 +269,14 @@ body::before {
 }
 
 .introduction-electric-car {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   color: #1e90ff;
   font-family: "Lalezar", sans-serif;
   text-align: center;
   font-size: 2.5rem;
-  margin: auto;
   width: 20rem;
   height: 4rem;
   border-radius: 50px;
@@ -293,17 +284,17 @@ body::before {
   backdrop-filter: blur(90px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 }
 
-.introduction {
-  width: 100%;
-  height: 17rem;
+.intro-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: end;
-  padding-top: 6rem;
-  line-height: 2.5rem;
+  row-gap: 5rem;
 
-  & h3 {
+   & h3 {
     color: #1e90ff;
     font-size: 1.4rem;
     padding-right: 0.4rem;
@@ -326,7 +317,6 @@ body::before {
 }
 
 .glass-cart {
-  margin: auto;
   border-radius: 30px;
   height: 12rem;
   width: 100rem;
@@ -350,7 +340,6 @@ body::before {
 /*  */
 
 .glass-back-text-pros-cons {
-  margin: auto;
   width: 15rem;
   height: 3.5rem;
   border-radius: 50px;
@@ -358,17 +347,17 @@ body::before {
   backdrop-filter: blur(90px);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  margin: auto;
   margin-top: 3rem;
 }
 
-.loction-benefits {
-  margin-top: 6rem;
-}
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}  
 
 .introduction-pros-cons {
-  width: 100%;
-  height: 85rem;
-  margin: auto;
   & h2 {
     font-family: "Lalezar", sans-serif;
     font-size: 2rem;
@@ -378,9 +367,8 @@ body::before {
 
   & .benefits-part {
     display: flex;
-    margin-top: 2rem;
-    gap: 9rem;
-    justify-content: center;
+    justify-content: space-evenly;
+      flex-wrap: wrap;
   }
   & .benefits-cart {
     color: #0a192f;
@@ -388,7 +376,7 @@ body::before {
     backdrop-filter: blur(8px);
     border: 1px solid rgba(74, 222, 128, 0.4);
     box-shadow: 0 4px 20px 0 rgba(22, 163, 74, 0.03);
-    width: 16%;
+    width: 20rem;
     height: 15rem;
     border-radius: 30px;
 
@@ -511,28 +499,28 @@ body::before {
 }
 /*  */
 .logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
   transition: all 0.5s;
-  /* padding-top: 5rem; */
-  height: 23rem;
 
   & h2 {
-    padding-bottom: 1rem;
     text-align: center;
+    font-family: "Lalezar", sans-serif;
+    font-size: 2rem;
+    color: #1e90ff;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
   }
 }
 
 .logos {
-  display: flex;
-  margin: auto;
   width: 100rem;
   height: 12rem;
   border-radius: 30px;
-  margin-top: 1rem;
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
+  justify-content: space-evenly;
 }
 
 .logo-company {
@@ -571,15 +559,7 @@ body::before {
   margin-top: 0.7rem;
 }
 
-.title-text-logo {
-  font-family: "Lalezar", sans-serif;
-  font-size: 2rem;
-  color: #1e90ff;
-  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-}
-
 .glass-back-text-logo {
-  margin: auto;
   width: 15rem;
   height: 3.5rem;
   border-radius: 50px;
@@ -731,17 +711,17 @@ body::before {
 }
 /*  */
 .introducing-car {
+  padding-top: 5rem;
   transition: all 0.5s;
   display: flex;
-  width: 100rem;
-  margin: auto;
-  margin-bottom: 25rem;
+  justify-content: center;
+  column-gap: 2rem;
+  height: 30rem;
 
   & .car-card {
     transition: all 0.5s;
     position: relative;
-    margin: auto;
-    width: 23%;
+    width: 25rem;
 
     & img {
       transition: all 0.5s;

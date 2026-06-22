@@ -153,53 +153,43 @@ body::before {
   }
 }
 
-/* .fade-bottom {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3.5rem;
-  backdrop-filter: blur(0.5px);
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(246, 247, 250, 0.4) 40%,
-    rgba(246, 247, 250, 0.6) 70%,
-    #f6f7fa 100%
-  );
-  pointer-events: none;
-  z-index: 999;
-} */
 
-.intro {
-  position: relative;
-  width: 100%;
-  height: 58.8rem;
-  overflow: hidden;
-  top: -5.8rem;
+.page-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.line1-intro,
-.line2-intro {
+.car-img-intro {
+  position: relative;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 58.8rem;
+  object-fit: cover;
+  border-radius: 0 0 35px 35px;
+}
+
+.title-text {
   font-family: "Lalezar", sans-serif;
+  position: absolute;
+  text-align: right;
+  line-height: 6rem;
+  color: #1e90ff;
+  font-size: 3rem;
+  z-index: 4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  top: 19rem;
+  right:8rem;
+}
+
+.intro {
+  overflow: hidden;
+   margin-top: -3.7rem;
 }
 
 .line2-intro {
   padding-right: 3rem;
-}
-
-.title-text {
-  position: absolute;
-  text-align: right;
-  line-height: 6rem;
-  padding-right: 8rem;
-  padding-top: 55rem;
-  color: #1e90ff;
-  transform: translateY(-50%);
-  font-size: 3rem;
-  z-index: 4;
-  text-decoration: none;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .down-bt {
@@ -245,6 +235,8 @@ body::before {
   border-radius: 0 0 35px 35px;
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 58.8rem;
   background: linear-gradient(
     to left,
     rgba(0, 0, 0, 0.8) 0%,
@@ -254,13 +246,6 @@ body::before {
   z-index: 3;
 }
 
-.car-img-intro {
-  z-index: 2;
-  width: 100%;
-  height: 58.8rem;
-  object-fit: cover;
-  border-radius: 0 0 35px 35px;
-}
 
 #pros-cons {
   display: inline-block;
@@ -294,7 +279,7 @@ body::before {
   text-align: end;
   row-gap: 5rem;
 
-   & h3 {
+  & h3 {
     color: #1e90ff;
     font-size: 1.4rem;
     padding-right: 0.4rem;
@@ -355,7 +340,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-}  
+}
 
 .introduction-pros-cons {
   & h2 {
@@ -368,7 +353,7 @@ body::before {
   & .benefits-part {
     display: flex;
     justify-content: space-evenly;
-      flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   & .benefits-cart {
     color: #0a192f;
@@ -502,7 +487,8 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1rem;
+  justify-content: center;
+  row-gap: 2rem;
   transition: all 0.5s;
 
   & h2 {
@@ -711,11 +697,11 @@ body::before {
 }
 /*  */
 .introducing-car {
-  padding-top: 5rem;
+  padding-top: 6rem;
   transition: all 0.5s;
   display: flex;
   justify-content: center;
-  column-gap: 2rem;
+  column-gap: 1rem;
   height: 30rem;
 
   & .car-card {
@@ -808,7 +794,7 @@ body::before {
 
 .introducing-car:has(.car-card-bmw:hover) .specs-bmw,
 .introducing-car:has(.car-card-byd:hover) .specs-byd,
-.introducing-car:has(.car-card-benz:hover) .specs-benz, 
+.introducing-car:has(.car-card-benz:hover) .specs-benz,
 .introducing-car:has(.car-card-tesla:hover) .specs-tesla {
   transition: all 0.5s;
   margin-top: 11rem;
@@ -886,22 +872,18 @@ body::before {
 }
 
 .information {
-  position: absolute;
-  width: 100%;
   height: 6rem;
-  z-index: 999;
   box-shadow: 0 -5px 20px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  flex-direction: row-reverse;
 }
 
 .link-section {
   border-radius: 90px;
   width: 14rem;
   height: 3.5rem;
-  border-radius: 30px;
-  margin-left: 85rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -912,7 +894,6 @@ body::before {
 
 .link {
   border-radius: 90px;
-  border-radius: 30px;
   width: 2.9rem;
   height: 2.9rem;
   display: flex;
@@ -960,7 +941,7 @@ body::before {
 }
 
 .builder {
-  position: absolute;
+  /* position: absolute; */
   font-family: "Lalezar", sans-serif;
   font-size: 1.2rem;
 }
@@ -969,8 +950,8 @@ body::before {
   font-family: "Vazirmatn", sans-serif;
   font-weight: 800;
   font-size: 1rem;
-  position: absolute;
-  margin-right: 92rem;
+  /* position: absolute; */
+  /* margin-right: 92rem; */
   border-radius: 90px;
   color: #fff;
   width: 8rem;
@@ -990,7 +971,6 @@ body::before {
   margin: auto;
   width: 60rem;
   height: 30rem;
-  border-radius: 30px;
   border-radius: 30px;
 
   & h3 {
@@ -1050,7 +1030,6 @@ body::before {
 
 .info-builder {
   display: flex;
-  margin: auto;
   justify-content: center;
   align-items: center;
   margin-top: 0.8rem;
